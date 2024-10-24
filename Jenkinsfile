@@ -11,9 +11,19 @@ pipeline {
                 bat 'dotnet build'
             } 
         }
-        stage('Test') {
+        stage('Test1') {
             steps {
-                bat 'dotnet test'
+                bat 'dotnet test TestProject1/TestProject1.csproj'
+            } 
+        }
+        stage('Test2') {
+            steps {
+                bat 'dotnet test TestProject2/TestProject2.csproj'
+            } 
+        }
+        stage('Test3') {
+            steps {
+                bat 'dotnet test TestProject3/TestProject3.csproj'
             } 
         }
     }
